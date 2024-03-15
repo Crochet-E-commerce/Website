@@ -1,5 +1,32 @@
 <%- include('../partials/head') %>
-<body>
-    <h1>Items</h1>
-</body>
-<%- include('../partials/footer') %>
+    <body>
+        <header>
+            <%- include('../partials/nav') %>
+        </header>
+        <main>
+            <div>
+                <div>
+                    <img src="<%= item.img %>" alt="<%= item.name %>">
+                </div>
+                <div>
+                    <h1><%= item.name %></h1>
+                    <p><%= item.details %></p>
+                    <div>
+                        <div>
+                            <button>Size</button>
+                            <p><%= item.size %></p>
+                        </div>
+                        <div>
+                            <button>Yarn</button>
+                            <p><%= item.yarn %></p>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Purchase</button>
+                        <button>Save</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <%- include('../partials/footer') %>

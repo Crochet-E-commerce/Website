@@ -5,6 +5,11 @@ const port = 3000
 
 app.set('view engine', 'ejs')
 
+const item = [
+    {name:'Flower Blanket', details:'Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors.', size:'15 in * 15 in',yarn:'xxxx'},
+    {name:'Carrot Toy', details:'Handcrafted with soft yarn in beautiful colors. Looks like real carrot.', size:'10 in * 6 in',yarn:'ttxx'},
+]
+
 app.get('/', (req, res) => {
     var categories = [
         {name:'Animal', img:'1'},
@@ -19,9 +24,12 @@ app.get('/', (req, res) => {
     })
 })
 
-app.get('/items', (req, res) => {
-    res.render('pages/items')
-})
+app.get('/items/:id', (req, res) => {
+    const itemId = req.params.id;
+    const selectedItem = item[itemId];
+    res.render('pages/items', { item: selectedItem });
+});
+
 app.listen(port, () => {
   console.log(`App listening at port ${port}`)
 })
