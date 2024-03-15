@@ -1,0 +1,31 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <header>
+            <%- include('../partials/nav') %>
+        </header>
+        <main>
+            <h1>
+                <%= tagline %>
+            </h1>
+
+            <div>
+                <h3>Categories</h3>
+                <ul>
+                    <% categories.forEach(function(category) { %>
+                        <li>
+                            <strong>
+                                <%= category.name %>
+                            </strong>
+                            <%= category.img %>
+                        </li>
+                        <% }); %>
+                </ul>
+            </div>
+
+            <div>
+                    <h3>Trending Products</h3>
+            </div>
+        </main>
+    </body>
+    <%- include('../partials/footer') %>
