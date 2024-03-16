@@ -9,25 +9,47 @@
                 <%= tagline %>
             </h1>
 
-            <div>
-                <h3>Categories</h3>
-                <ul>
+            <div class="flex flex-col gap-8 my-10">
+                <h3 class="text-center text-xl font-bold">Categories</h3>
+                <div class="flex justify-between">
                     <% categories.forEach(function(category,index) { %>
-                        <li>
-                            <a href="/shop/<%= index %>">
-                                <strong>
-                                    <%= category.name %>
-                                </strong>
-                                <%= category.img %>
-                            </a>
 
-                        </li>
+                        <a href="/shop/<%= index %>"
+                            class="flex flex-col justify-center items-center w-48 h-48 rounded-2xl border-2 border-black">
+                            <strong>
+                                <%= category.name %>
+                            </strong>
+                            <%= category.img %>
+                        </a>
+
                         <% }); %>
-                </ul>
+                </div>
             </div>
 
-            <div>
-                <h3>Trending Products</h3>
+            <div class="flex gap-16">
+                <div class="w-2/3">
+                    <div class="flex gap-2 rounded-2xl bg-black text-white">
+                        <p>Icon</p>
+                        <h3 class="font-bold">Special Offers</h3>
+                    </div>
+                </div>
+
+                <div class="w-full">
+                    <div>
+                        <div class="flex gap-2 rounded-2xl bg-black text-white">
+                            <p>Icon</p>
+                            <h3 class="font-bold">Trending Products</h3>
+                        </div>
+                        <%- include('../partials/lists/trendingLists') %>
+                    </div>
+                    <div>
+                        <div class="flex gap-2 rounded-2xl bg-black text-white">
+                            <p>Icon</p>
+                            <h3 class="font-bold">Popular Picks</h3>
+                        </div>
+                        <%- include('../partials/lists/popularLists') %>
+                    </div>
+                </div>
             </div>
         </main>
     </body>

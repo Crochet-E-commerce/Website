@@ -1,0 +1,12 @@
+<div class="flex justify-between">
+    <% item.filter(product=> product.type === 'popular').forEach(function(product) { %>
+        <div class="flex flex-col justify-center items-center w-48 h-48 rounded-2xl border-2 border-black">
+            <a href="/items/<%= product.name %>">
+                <strong>
+                    <%= product.name %>
+                </strong>
+                <img src="<%= product.img %>" alt="<%= product.name %>" />
+            </a>
+        </div>
+        <% }); %>
+</div>

@@ -6,9 +6,15 @@ const port = 3000
 app.set('view engine', 'ejs')
 
 const item = [
-    {name:'Flower Blanket', details:'Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors.', size:'15 in * 15 in',yarn:'xxxx', category:'other'},
-    {name:'Lemon', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit'},
-    {name:'Strawberry', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit'},
+    {name:'Flower Blanket', details:'Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors.', size:'15 in * 15 in',yarn:'xxxx', category:'other', price:'150', img:'0', type: 'trending'},
+    {name:'Lemon', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit',  price:'20',img:'1', type: 'trending'},
+    {name:'Strawberry', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit',  price:'25', img:'2', type: 'trending'},
+    {name:'Mashroom Cardigan', details:'Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors.', size:'15 in * 15 in',yarn:'xxxx', category:'other', price:'150', img:'0', type: 'trending'},
+    {name:'Rabbit', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit',  price:'20',img:'1', type: 'popular'},
+    {name:'Octopus', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit',  price:'25', img:'2',type: 'popular'},
+    {name:'Tulip', details:'Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors.', size:'15 in * 15 in',yarn:'xxxx', category:'other', price:'150', img:'0',type: 'popular'},
+    {name:'Patch Top', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit',  price:'20',img:'1', type: 'popular'},
+    {name:'Turtles', details:'Handcrafted with soft yarn in beautiful colors. Looks like real lemon.', size:'10 in * 6 in',yarn:'ttxx', category:'fruit',  price:'25', img:'2'},
 ];
 
 const categories = [
@@ -24,7 +30,8 @@ app.get('/', (req, res) => {
     var tagline = "Discover the finest crochet products"
     res.render('pages/index',{
         categories:categories,
-        tagline:tagline
+        tagline:tagline,
+        item:item
     })
 })
 

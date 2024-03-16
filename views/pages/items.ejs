@@ -1,24 +1,31 @@
 <%- include('../partials/head') %>
+
     <body>
         <header>
             <%- include('../partials/nav') %>
         </header>
         <main>
-            <div>
-                <div>
+            <div class="flex">
+                <div class="w-full">
                     <img src="<%= item.img %>" alt="<%= item.name %>">
                 </div>
-                <div>
-                    <h1><%= item.name %></h1>
-                    <p><%= item.details %></p>
+                <div class="w-full flex flex-col gap-4">
+                    <h1 class="text-xl font-bold">
+                        <%= item.name %>
+                    </h1>
+                    <p> <%= item.details %></p>
                     <div>
                         <div>
-                            <button>Size</button>
-                            <p><%= item.size %></p>
+                            <button onclick="toggleP('size')">Size</button>
+                            <button onclick="toggleP('yarn')">Yarn</button>
                         </div>
                         <div>
-                            <button>Yarn</button>
-                            <p><%= item.yarn %></p>
+                            <p id="size" class="hidden">
+                                <%= item.size %>
+                            </p>
+                            <p id="yarn" class="hidden">
+                                <%= item.yarn %>
+                            </p>
                         </div>
                     </div>
                     <div>
@@ -26,7 +33,26 @@
                         <button>Save</button>
                     </div>
                 </div>
-            </div>
         </main>
     </body>
     <%- include('../partials/footer') %>
+
+        <script>
+            function toggleP(type) {
+                var sizeParagraph = document.getElementById('size');
+                var yarnParagraph = document.getElementById('yarn');
+
+                if (type === 'size') {
+                    sizeParagraph.classList.toggle('hidden');
+                    yarnParagraph.classList.add('hidden');
+                } else if (type === 'yarn') {
+                    yarnParagraph.classList.toggle('hidden');
+                    sizeParagraph.classList.add('hidden');
+                }
+            }
+
+            window.onload = function () {
+                var sizeParagraph = document.getElementById('size');
+                sizeParagraph.classList.remove('hidden');
+            }
+        </script>

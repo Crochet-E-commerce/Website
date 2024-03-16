@@ -1,22 +1,22 @@
-<div>
+<div class="grid grid-cols-4 gap-4">
     <% if (shop.name.toLowerCase() === 'all') { %>
         <% item.forEach(function(item) { %>
-            <div>
-                <a href="/items/<%=item.name%>">
-                    <h3>
-                        <%= item.name %>
-                    </h3>
+            <div class="h-60 bg-slate-600">
+                <a href="/items/<%= item.name %>">
+                    <img src="<%= item.img %>" alt="<%= item.name %>" />
+                    <p><strong><%= item.name %></strong></p>
+                    <p>$ <%= item.price %></p>
                 </a>
             </div>
         <% }); %>
     <% } else { %>
         <% item.forEach(function(item) { %>
-            <% if (item.category.toLowerCase() === shop.name.toLowerCase()) { %>
-                <div>
-                    <a href="/items/<%=item.name%>">
-                        <h3>
-                            <%= item.name %>
-                        </h3>
+            <% if (shop.name.toLowerCase() === item.category.toLowerCase()) { %>
+                <div class="h-60 bg-slate-600">
+                    <a href="/items/<%= item.name %>">
+                        <img src="<%= item.img %>" alt="<%= item.name %>" />
+                        <p><strong><%= item.name %></strong></p>
+                        <p>$ <%= item.price %></p>
                     </a>
                 </div>
             <% } %>

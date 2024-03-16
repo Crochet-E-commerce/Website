@@ -1,21 +1,22 @@
 <%- include('../partials/head') %>
+
     <body>
         <header>
             <%- include('../partials/nav') %>
         </header>
         <main>
-            <div>
-                <div>
-                    <a href="/">Back to Home</a>
+            <div class="h-40 bg-black text-white my-4">
+                <div class="absolute">
+                    <a href="/">← Back to Home</a>
                 </div>
-                <h1>
-                    <%= shop.name %>
-                </h1>
-                <%- include('../partials/lists/shopLists') %>
+                <div class="h-40 flex items-center justify-center">
+                    <h1 class="text-3xl font-bold">
+                        <%= shop.name %>
+                    </h1>
+                </div>
+               
             </div>
-            <div>
-
-            </div>
+            <%- include('../partials/lists/shopLists') %>
         </main>
     </body>
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
