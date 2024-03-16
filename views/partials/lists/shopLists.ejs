@@ -1,0 +1,25 @@
+<div>
+    <% if (shop.name.toLowerCase() === 'all') { %>
+        <% item.forEach(function(item) { %>
+            <div>
+                <a href="/items/<%=item.name%>">
+                    <h3>
+                        <%= item.name %>
+                    </h3>
+                </a>
+            </div>
+        <% }); %>
+    <% } else { %>
+        <% item.forEach(function(item) { %>
+            <% if (item.category.toLowerCase() === shop.name.toLowerCase()) { %>
+                <div>
+                    <a href="/items/<%=item.name%>">
+                        <h3>
+                            <%= item.name %>
+                        </h3>
+                    </a>
+                </div>
+            <% } %>
+        <% }); %>
+    <% } %>
+</div>
