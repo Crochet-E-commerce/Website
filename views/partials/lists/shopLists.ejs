@@ -3,7 +3,9 @@
         <% item.forEach(function(item) { %>
             <div class="h-60 bg-slate-600">
                 <a href="/items/<%= item.name %>">
-                    <img src="<%= item.img %>" alt="<%= item.name %>" />
+                    <img class="h-48 w-48 object-cover" 
+                    src="<%= (item.status === 'soldout') ? '/soldout.jpg' : item.img %>" 
+                    alt="<%= item.name %>" />
                     <p><strong><%= item.name %></strong></p>
                     <p>$ <%= item.price %></p>
                 </a>
@@ -14,7 +16,9 @@
             <% if (shop.name.toLowerCase() === item.category.toLowerCase()) { %>
                 <div class="h-60 bg-slate-600">
                     <a href="/items/<%= item.name %>">
-                        <img src="<%= item.img %>" alt="<%= item.name %>" />
+                        <img class="h-48 w-48 object-cover" 
+                        src="<%= (item.status === 'soldout') ? '/soldout.jpg' : item.img %>" 
+                        alt="<%= item.name %>" />
                         <p><strong><%= item.name %></strong></p>
                         <p>$ <%= item.price %></p>
                     </a>

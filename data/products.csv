@@ -1,0 +1,10 @@
+id,name,detail,size,yarn,category,price,img,type,status
+1,Flower Blanket,"Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors. Looks like real lemon.",15 in * 15 in,xxxx,other,150,0,trending,available
+2,Lemon,"Handcrafted with soft yarn in beautiful colors. Looks like real lemon.",10 in * 6 in,ttxx,fruit,20,1,trending,available
+3,Strawberry,"Handcrafted with soft yarn in beautiful colors. Looks like real lemon.",10 in * 6 in,ttxx,fruit,25,2,trending,available
+4,Mashroom Cardigan,"Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors. Looks like real lemon.",15 in * 15 in,xxxx,other,150,0,trending,available
+5,Rabbit,"Handcrafted with soft yarn in beautiful colors. Looks like real lemon.",10 in * 6 in,ttxx,fruit,20,1,popular,available
+6,Octopus,"Handcrafted with soft yarn in beautiful colors. Looks like real lemon.",10 in * 6 in,ttxx,fruit,25,2,popular,available
+7,Tulip,"Discover our cozy flower blanket, handcrafted with soft yarn in beautiful colors. Looks like real lemon.",15 in * 15 in,xxxx,other,150,0,popular,available
+8,Patch Top,"Handcrafted with soft yarn in beautiful colors. Looks like real lemon.",10 in * 6 in,ttxx,fruit,20,1,popular,available
+9,Turtle,"Handcrafted with soft yarn in beautiful colors. Looks like real lemon.",10 in * 6 in,ttxx,fruit,25,2,none,soldout
