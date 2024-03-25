@@ -3,13 +3,12 @@ import pg from "pg";
 import categories from "./data/categories.json" assert { type: 'json' };
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('images'));
-
 //middleware
 const db = new pg.Client({
     user: "postgres",

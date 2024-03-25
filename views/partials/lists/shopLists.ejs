@@ -4,7 +4,8 @@
             <div class="h-60 bg-slate-600">
                 <a href="/items/<%= item.name %>">
                     <img class="h-48 w-48 object-cover" 
-                    src="<%= (item.status === 'soldout') ? '/soldout.jpg' : item.img %>" 
+                    src="<%= (item.status === 'soldout') ? '/soldout.jpg' : '/item/' + item.id + '.png' %>"
+
                     alt="<%= item.name %>" />
                     <p><strong><%= item.name %></strong></p>
                     <p>$ <%= item.price %></p>
@@ -17,7 +18,8 @@
                 <div class="h-60 bg-slate-600">
                     <a href="/items/<%= item.name %>">
                         <img class="h-48 w-48 object-cover" 
-                        src="<%= (item.status === 'soldout') ? '/soldout.jpg' : item.img %>" 
+                        src="<%= (item.status === 'soldout') ? '/soldout.jpg' : '/item/' + item.id + '.png' %>"
+ 
                         alt="<%= item.name %>" />
                         <p><strong><%= item.name %></strong></p>
                         <p>$ <%= item.price %></p>
