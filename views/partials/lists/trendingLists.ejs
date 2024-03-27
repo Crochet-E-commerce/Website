@@ -1,12 +1,13 @@
-<div class="flex justify-between">
+<div class="flex justify-between space-x-6">
     <% item.filter(product=> product.type === 'trending').forEach(function(product) { %>
-        <div class="flex flex-col justify-center items-center w-48 h-48 rounded-2xl border-2 border-black">
-            <a href="/items/<%= product.name %>">
-                <strong>
+        <div class="flex flex-col justify-center items-center w-48 h-48 rounded-2xl shadow-md border-black overflow-hidden">
+            <a href="/items/<%= product.name %>" class="flex flex-col items-center">
+                <strong class="mb-2">
                     <%= product.name %>
                 </strong>
-                <img src="/item/<%= product.id %>.png" alt="<%= product.name %>" />
+                <img src="/item/<%= product.id %>.png" alt="<%= product.name %>" class="max-w-full max-h-24 h-auto" />
             </a>
         </div>
+
         <% }); %>
 </div>
