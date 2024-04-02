@@ -13,33 +13,27 @@
                     <h1 class="text-xl font-bold">
                         <%= item.name %>
                     </h1>
-                    <p class="pr-6"> <%= item.detail %></p>
+                    <p> <%= item.details %></p>
                     <div>
-                        
-                        <div class="pb-4">
-                            <button onclick="toggleP('size')"  class="border border-gray-500 hover:border-pink-700 text-gray-500 hover:text-pink-700 py-0.5 px-4 rounded-full">Size</button>
-                            <button onclick="toggleP('yarn')" class="border border-gray-500 hover:border-pink-700 text-gray-500 hover:text-pink-700 py-0.5 px-4 rounded-full">Yarn</button>
-                        </div>
 
-                        <div>
-                            <p id="size" class="hidden">
-                                <%= item.size %>
-                            </p>
-                            <p id="yarn" class="hidden">
-                                <%= item.yarn %>
-                            </p>
-                        </div>
 
-                        
-                    </div>
-                    <div>
-                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                            Purchase
-                        </button>
-                        <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">
-                            Save ♡
-                        </button>
-                    </div>
+                       <div class="flex justify-between mt-4">
+    <div>
+        <button onclick="toggleP('size')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Size</button>
+        <button onclick="toggleP('yarn')" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Yarn</button>
+    </div>
+
+    <div>
+        <p id="size" class="hidden text-lg font-bold text-blue-500"><%= item.size %></p>
+        <p id="yarn" class="hidden text-lg font-bold text-green-500"><%= item.yarn %></p>
+    </div>
+</div>
+
+<div class="flex justify-end mt-4">
+    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Purchase</button>
+    <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded">Save ♡</button>
+</div>
+
                     
                 </div>
         </main>

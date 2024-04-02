@@ -13,24 +13,21 @@
                     <h1 class="text-xl font-bold">
                         <%= item.name %>
                     </h1>
-                    <p class="pr-6"> <%= item.detail %></p>
+                    <p> <%= item.details %></p>
                     <div>
-                        
-                        <div class="pb-4">
-                            <button onclick="toggleP('size')"  class="border border-gray-500 hover:border-pink-700 text-gray-500 hover:text-pink-700 py-0.5 px-4 rounded-full">Size</button>
-                            <button onclick="toggleP('yarn')" class="border border-gray-500 hover:border-pink-700 text-gray-500 hover:text-pink-700 py-0.5 px-4 rounded-full">Yarn</button>
+                        <div>
+                            <button onclick="toggleP('size')">Size</button>
+                            <button onclick="toggleP('yarn')">Yarn</button>
                         </div>
+
 
                         <div>
-                            <p id="size" class="hidden">
-                                <%= item.size %>
-                            </p>
-                            <p id="yarn" class="hidden">
-                                <%= item.yarn %>
-                            </p>
+                            <p id="size" class="text-black-500">Size: <%= item.size %></p>
+                            <p id="yarn" class="text-black-500">Yarn: <%= item.yarn %></p>
                         </div>
-
                         
+
+
                     </div>
                     <div>
                         <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
